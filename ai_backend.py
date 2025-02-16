@@ -32,7 +32,7 @@ client = groq.Client(api_key=os.getenv('GROQ_API_KEY'))
 
 # Supported languages
 SUPPORTED_LANGUAGES = {
-    "python3": {"extension": ".py", "command": ["C:\\Users\\joshu\\AppData\\Local\\Programs\\Python\\Python310\\python.exe"]},
+    "python3": {"extension": ".py", "command": ["python3"]},
     "javascript": {"extension": ".js", "command": ["node"]},
     "cpp": {"extension": ".cpp", "command": ["g++", "./a.out"]}
 }
