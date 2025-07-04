@@ -57,7 +57,7 @@ def get_completion():
     ]
     
     chat_completion = client.chat.completions.create(
-        messages=messages, model="mixtral-8x7b-32768", temperature=0.7, max_tokens=2000
+        messages=messages, model="llama3-8b-8192", temperature=0.7, max_tokens=2000
     )
     return jsonify({"completion": chat_completion.choices[0].message.content})
 
@@ -186,7 +186,7 @@ Format each suggestion in 1-2 sentences."""}
     try:
         chat_completion = client.chat.completions.create(
             messages=messages,
-            model="mixtral-8x7b-32768",
+            model="llama3-8b-8192",
             temperature=0.3,
             max_tokens=20000
         )
@@ -235,7 +235,7 @@ I encountered this error while running the following {language} code: {error_mes
             
             chat_completion = client.chat.completions.create(
                 messages=messages,
-                model="mixtral-8x7b-32768",
+                model="llama3-8b-8192",
                 temperature=0.3,
                 max_tokens=300
             )
