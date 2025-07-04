@@ -27,7 +27,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Initialize Groq client (Replace with actual API key)
-client = groq.Client(api_key=os.getenv('GROQ_API_KEY'))
+client = groq.Client(api_key="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")
 
 
 # Supported languages
@@ -149,7 +149,7 @@ Format response as a JSON array of strings."""}
     try:
         chat_completion = client.chat.completions.create(
             messages=messages,
-            model="mixtral-8x7b-32768",
+            model="llama3-70b-8192",
             temperature=0.2,
             max_tokens=100
         )
