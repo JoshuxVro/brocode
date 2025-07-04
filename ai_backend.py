@@ -106,7 +106,7 @@ def chat():
 
     # Generate AI response
     chat_completion = client.chat.completions.create(
-        messages=chat_sessions[session_id], model="mixtral-8x7b-32768", temperature=0.7, max_tokens=2000
+        messages=chat_sessions[session_id], model="llama3-70b-8192", temperature=0.7, max_tokens=2000
     )
     ai_response = chat_completion.choices[0].message.content
 
